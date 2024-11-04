@@ -14,7 +14,6 @@ Armazenamento em cache é o processo de armazenamento de cópias de arquivos em 
   - [Clonando Repositório](#clonando-repositório)
   - [Etapas](#etapas)
 - [Instrução de uso](#instrução-de-uso)
-- [API Endpoints](#api-endpoints)
 
 </details>
 
@@ -67,3 +66,12 @@ Inicie o servidor local
 ``` bash
 node server.js
 ```
+
+## Funcionammento
+
+ O Redis é frequentemente usado para armazenar dados temporários que podem ser recuperados rapidamente,  
+ melhorando a performance de aplicações, especialmente para dados que são acessados com frequência.
+
+- #### Para vizualizar o aumento da performance, siga os passos abaixo
+
+...
