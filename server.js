@@ -12,7 +12,12 @@ async function exampleGetData() {
     })
 }
 
+// outro método para "expirar" o cache
+// app.get('/update', async (req, res) => {
+//     await client.del('exampleGetData')
 
+//     res.send({ ok: true })
+// })
 
 app.get('/', async (req, res) => {
     const dataFromCache = await client.get('exampleGetData')
