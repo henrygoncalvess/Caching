@@ -1,5 +1,6 @@
 const express = require('express');
 const { createClient } = require('redis');
+const client = createClient();
 
 const app = express()
 
@@ -12,14 +13,20 @@ async function exampleGetData() {
 }
 
 app.get('/', async (req, res) => {
+    const dataFromCache = await client.get('exampleGetData')
+
+    if (dataFromCache){
+        return res.send(JSON.parse(dataFromCache))
+    }
+
     const response = await exampleGetData()
+
+    await client.set('exampleGetData', JSON.stringify(response))
 
     res.send(response)
 })
 
 const startup = async () => {
-    const client = createClient();
-
     await client.connect()
 
     console.log(await client.ping('conectado ao redis'));
