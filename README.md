@@ -25,19 +25,9 @@ Armazenamento em cache é o processo de armazenamento de cópias de arquivos em 
 ### Pré-requisitos
 - **REDIS** - [Tutorial de instalação]()
 
-Para a instalação dos frameworks, middlewares e dependências que possibilitaram a criação da API  
-e a conexão com o MySQL é necessário que você possua as seguintes ferramentas:
-
 - **Node.js** - [Tutorial de instalação](https://nodejs.org/pt)
 
 - **npm** - [Tutorial de instalação](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-
-Para fazer requisições e testar a conexão com o banco:
-- **Postman** - [Tutorial de instalação](https://www.postman.com/downloads/)
-
-> [!tip]
-> Também é possível fazer requisições pela linha de comando.  
-[Clique aqui](https://www.campuscode.com.br/conteudos/comandos-curl-para-testar-requisicoes-api) para aprender a fazer requisições pelo terminal
 
 <br>
 
