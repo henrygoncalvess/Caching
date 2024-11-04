@@ -12,6 +12,8 @@ async function exampleGetData() {
     })
 }
 
+
+
 app.get('/', async (req, res) => {
     const dataFromCache = await client.get('exampleGetData')
 
@@ -21,7 +23,7 @@ app.get('/', async (req, res) => {
 
     const response = await exampleGetData()
 
-    await client.set('exampleGetData', JSON.stringify(response))
+    await client.set('exampleGetData', JSON.stringify(response), { EX: 10 })
 
     res.send(response)
 })
