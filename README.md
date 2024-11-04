@@ -23,7 +23,7 @@ Armazenamento em cache é o processo de armazenamento de cópias de arquivos em 
 ## Instrução de instalação
 
 ### Pré-requisitos
-- **REDIS** - [Tutorial de instalação]()
+- **REDIS** - [Tutorial de instalação](https://youtu.be/188Fy-oCw4w?si=xYljV44RNw7rg69y)
 
 - **Node.js** - [Tutorial de instalação](https://nodejs.org/pt)
 
