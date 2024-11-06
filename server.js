@@ -7,17 +7,10 @@ const app = express()
 async function exampleGetData() {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve([ { data: "123" }, { data: "456"} ] )
+            resolve( [ { data: "123" }, { data: "456"} ] )
         }, 2000)
     })
 }
-
-// outro método para "expirar" o cache
-// app.get('/update', async (req, res) => {
-//     await client.del('exampleGetData')
-
-//     res.send({ ok: true })
-// })
 
 app.get('/', async (req, res) => {
     const dataFromCache = await client.get('exampleGetData')
