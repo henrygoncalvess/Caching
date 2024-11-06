@@ -69,9 +69,20 @@ node server.js
 
 ## Funcionammento
 
- O Redis é frequentemente usado para armazenar dados temporários que podem ser recuperados rapidamente,  
- melhorando a performance de aplicações, especialmente para dados que são acessados com frequência.
+O Redis é frequentemente usado para armazenar dados temporários que podem ser recuperados rapidamente,  
+melhorando a performance de aplicações, especialmente para dados que são acessados com frequência.
+Para conseguir vizualizar esse aumento de performance, siga os passos abaixo.
 
-- #### Para vizualizar o aumento da performance, siga os passos abaixo
+#### 1. em seu navegador, acesse `http://localhost:3000`
 
-...
+#### 2. Abra a ferramenta de desenvolvedor com `Ctrl + Shift + i`
+
+#### 3. Selecione a seguinte aba:
+![image](https://github.com/user-attachments/assets/22f9f6b3-587f-4811-93c9-99478c55287a)
+
+Repare no JSON abaixo, a ferramenta do desenvovedor indica que ele levou **5 segundos** para  
+carregar os dados
+![image](https://github.com/user-attachments/assets/8912b70a-9749-41cb-94da-02052d8ada65)
+
+Isso acontece pois existe uma função no código que simula essa demora para resgatar os dados.
+Mas após recarregar a página `F5`, perceba que o tempo para resgatar os dados diminuiu consideravelmente
