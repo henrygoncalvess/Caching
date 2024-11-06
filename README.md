@@ -15,6 +15,7 @@ Armazenamento em cache é o processo de armazenamento de cópias de arquivos em 
   - [Etapas](#etapas)
 - [Instrução de uso](#instrução-de-uso)
 - [Funcionamento](#funcionamento)
+- [Pensamento lógico do cache](#pensamento-lógico-do-cache)
 
 </details>
 
@@ -42,7 +43,6 @@ git clone https://github.com/henrygoncalvess/Caching.git
 <br>
 
 ### Etapas
-
 #### 1. crie seu projeto Node.js
 
 `repositorios\clonados\Caching`
@@ -60,7 +60,6 @@ npm install express@4.21.1 redis@4.7.0
 <br>
 
 ## Instrução de uso
-
 Inicie o servidor local
 
 `repositorios\clonados\Caching`
@@ -68,8 +67,9 @@ Inicie o servidor local
 node server.js
 ```
 
-## Funcionamento
+<br>
 
+## Funcionamento
 O Redis é frequentemente usado para armazenar dados temporários que podem ser recuperados rapidamente,  
 melhorando a performance de aplicações, especialmente para dados que são acessados com frequência.
 Para conseguir vizualizar esse aumento de performance, siga os passos abaixo.
@@ -91,3 +91,14 @@ Os dados resgatados a primeira vez que a página é acessada são armazenados em
 posteriores resgatam os dados diretamente da cache, para reduzir o tempo de espera.
 
 ![image](https://github.com/user-attachments/assets/cb3a0242-40c3-413b-a3e4-582a84b8d0b7)
+
+<br>
+
+## Pensamento lógico do cache
+Vamos levar em consideração que o nosso servidor está recebendo 100 requisições por minuto.  
+Se cada requisição está demorando **2 segundos** para conseguir os dados, então o processo de  
+coleta de dados está demorando **200 segundos**. Se aplicarmos um tempo de expiração de **1 minuto**  
+na cache, será o suficiente para apenas uma dessas 100 requisições gastar 2 segundos obtendo os dados.
+
+**Ou seja, não necessariamente a cache precise de um tempo de expiração muito longo,  
+ela só precisa  ser mais rápida que o recurso original.**
