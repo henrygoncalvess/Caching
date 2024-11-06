@@ -14,6 +14,7 @@ Armazenamento em cache é o processo de armazenamento de cópias de arquivos em 
   - [Clonando Repositório](#clonando-repositório)
   - [Etapas](#etapas)
 - [Instrução de uso](#instrução-de-uso)
+- [Funcionamento](#funcionamento)
 
 </details>
 
@@ -67,7 +68,7 @@ Inicie o servidor local
 node server.js
 ```
 
-## Funcionammento
+## Funcionamento
 
 O Redis é frequentemente usado para armazenar dados temporários que podem ser recuperados rapidamente,  
 melhorando a performance de aplicações, especialmente para dados que são acessados com frequência.
@@ -84,5 +85,9 @@ Repare no JSON abaixo, a ferramenta do desenvovedor indica que ele levou **5 seg
 carregar os dados
 ![image](https://github.com/user-attachments/assets/8912b70a-9749-41cb-94da-02052d8ada65)
 
-Isso acontece pois existe uma função no código que simula essa demora para resgatar os dados.
+Isso acontece pois existe uma função no código que simula essa demora para resgatar os dados.  
 Mas após recarregar a página `F5`, perceba que o tempo para resgatar os dados diminuiu consideravelmente
+Os dados resgatados a primeira vez que a página é acessada são armazenados em cache e todos os acessos  
+posteriores resgatam os dados diretamente da cache, para reduzir o tempo de espera.
+
+![image](https://github.com/user-attachments/assets/cb3a0242-40c3-413b-a3e4-582a84b8d0b7)
