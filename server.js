@@ -8,7 +8,7 @@ async function exampleGetData() {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve( [ "Usuário 1", "Usuário 2" ] )
-        }, 2000)
+        }, 5000)
     })
 }
 
@@ -21,7 +21,7 @@ app.get('/', async (req, res) => {
 
     const response = await exampleGetData()
 
-    await client.set('exampleGetData', JSON.stringify(response), { EX: 10 })
+    await client.set('exampleGetData', JSON.stringify(response), { EX: 180 })
 
     res.send(response)
 })
