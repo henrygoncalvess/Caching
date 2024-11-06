@@ -7,7 +7,7 @@ const app = express()
 async function exampleGetData() {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve( [ { data: "123" }, { data: "456"} ] )
+            resolve( [ "Usuário 1", "Usuário 2" ] )
         }, 2000)
     })
 }
