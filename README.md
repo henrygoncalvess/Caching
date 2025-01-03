@@ -21,7 +21,7 @@ Armazenamento em cache é o processo de armazenamento de cópias de arquivos em 
 - [Instrução de instalação](#instrução-de-instalação)
   - [Pré-requisitos](#pré-requisitos)
   - [Clonando Repositório](#clonando-repositório)
-  - [Etapas](#etapas)
+  - [Configuração do Projeto](#configuração-do-projeto)
 - [Instrução de uso](#instrução-de-uso)
 - [Funcionamento](#funcionamento)
 - [Pensamento lógico do cache](#pensamento-lógico-do-cache)
@@ -33,11 +33,11 @@ Armazenamento em cache é o processo de armazenamento de cópias de arquivos em 
 ## Instrução de instalação
 
 ### Pré-requisitos
-- **REDIS** - [Tutorial de instalação](https://youtu.be/188Fy-oCw4w?si=xYljV44RNw7rg69y)
+- <img src="https://cdn.simpleicons.org/redis/FF4438/FF4438?viewbox=auto" width=24>&nbsp; **REDIS** - [Tutorial de instalação](https://youtu.be/188Fy-oCw4w?si=xYljV44RNw7rg69y)
 
-- **Node.js** - [Tutorial de instalação](https://nodejs.org/pt)
+- <img src="https://cdn.simpleicons.org/nodedotjs/5FA04E/5FA04E?viewbox=auto" width=24>&nbsp; **Node.js** - [Tutorial de instalação](https://nodejs.org/pt)
 
-- **npm** - [Tutorial de instalação](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- <img src="https://cdn.simpleicons.org/npm/CB3837/CB3837?viewbox=auto" width=24>&nbsp; **npm** - [Tutorial de instalação](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 <br>
 
@@ -51,7 +51,7 @@ git clone https://github.com/henrygoncalvess/Caching.git
 
 <br>
 
-### Etapas
+### Configuração do Projeto
 #### 1. crie seu projeto Node.js
 
 `repositorios\clonados\Caching`
